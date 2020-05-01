@@ -37,22 +37,47 @@ const trainModel = (setTensor) => {
         console.log("Trained model!");
         setTensor("The model has been trained");
     });
+};
+
+const loadModel = (setTensor) => {
+    console.log(dogImage);
+    //tf.loadLayersModel("")
 }
 
 
 const TensorFlowTest = () => {
     const [tensor, setTensor] = useState("Training the model...");
-    const [ran, setRan] = useState(false);
-    const [imageLoaded, setImageLoaded] = useState(false);
-    const [imageStarted, setImageStarted] = useState(false);
-    const [image, setImage] = useState(new Image());
 
     useEffect(() => {
-        console.log("i am rendering!!! lol");
-        trainModel(setTensor);
-    }, []);
+        const uploadJSONInput = document.getElementById('upload-json');
+        const uploadWeightsInput = document.getElementById('upload-weights');
+        console.log(uploadJSONInput.files);
+        console.log(uploadWeightsInput.files);
+        if (uploadJSONInput.files.length && uploadWeightsInput.files.length) {
+            console.log("loading model!");
+            console.log(uploadJSONInput);
+            tf.loadLayersModel(tf.io.browserFiles(
+                [uploadJSONInput.files[0], uploadWeightsInput.files[0]])).then(
+                (model) => {
+                    const prediction = tf.randomUniform([1, 32, 32, 3], 0, 1);
+                    console.log(model);
+                    const newTen = model.predict(prediction);
+                    tf.print(newTen);
+                    console.log("Trained model!");
+                    setTensor("The model has been trained");
+                }
+            );
+        }
 
-    return <div>{tensor}</div>
+        console.log("i am rendering!!! lol");
+        //loadModel(setTensor);
+        //trainModel(setTensor);
+    }, [tensor]);
+    return <div>
+        <input type={"file"} id = "upload-json" onChange={() => setTensor("Loaded Json")}/>
+        <input type = "file" id = "upload-weights" onChange={() => setTensor("Loaded Weights")}/>
+        <div>{tensor}</div>
+    </div>;
 };
 
 export default TensorFlowTest;
