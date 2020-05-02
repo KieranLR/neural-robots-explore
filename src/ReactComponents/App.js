@@ -1,9 +1,7 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import PixiRenderTest from "./components/PixiRenderTest";
-import TensorFlowTest from "./components/TensorFlowTest";
 import styled from "styled-components";
+import GameRenderer from "./../Game/GameRenderer"
 
 const Header = styled.div`
     display: inline-block;
@@ -23,7 +21,7 @@ function App() {
     <div className="App">
       <Header>
           {/*<PixiRenderTest/>*/}
-          <TensorFlowTest/>
+          <GameRenderer/>
       </Header>
     </div>
   );
