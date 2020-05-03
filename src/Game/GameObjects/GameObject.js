@@ -1,18 +1,18 @@
 export default class GameObject {
     constructor(){
-        this.components = [];
-        this.init();
+        this.components = {};
     }
 
     init() {
-        this.components.forEach((component) => {
-            component.init();
+        Object.keys(this.components).forEach((componentKey) => {
+            this.components[componentKey].init();
         });
     };
 
     update() {
-        this.components.forEach((component) => {
-            component.update();
+        console.log("Got call")
+        Object.keys(this.components).forEach((componentKey) => {
+            this.components[componentKey].update();
         });
     };
 }
