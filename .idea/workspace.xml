@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8064e189-21f8-4c10-acc4-8d6475f50610" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Game/GameComponents/FilteredSprite.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/Filters/simplexNoise.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Filters/simplexNoise.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/GameComponents/Sprite.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameComponents/Sprite.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/GameObjects/Actor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameObjects/Actor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/GameObjects/Sprites/NoiseTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameObjects/Sprites/NoiseTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/PixiController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/PixiController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Shaders/basicShader.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Filters/basicShader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/Shaders/simplexNoise.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/Filters/simplexNoise.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReactComponents/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReactComponents/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ReactComponents/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReactComponents/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +110,7 @@
       <workItem from="1588456079460" duration="1599000" />
       <workItem from="1588499362617" duration="8186000" />
       <workItem from="1588543233504" duration="929000" />
-      <workItem from="1588559047824" duration="10628000" />
+      <workItem from="1588559047824" duration="14300000" />
     </task>
     <task id="LOCAL-00001" summary="Add basic 2D rendering, and basic image tensorflow model.">
       <created>1588253561082</created>
@@ -150,7 +147,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588589822133</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Refactor app -&gt; game.app">
+      <created>1588593728555</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1588593728555</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,17 +166,18 @@
     <MESSAGE value="Add Game Primitives. (GameObject and GameComponent)" />
     <MESSAGE value="Restructure Game Renderer" />
     <MESSAGE value="Add Simplex Noise Shader" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Simplex Noise Shader" />
+    <MESSAGE value="Refactor app -&gt; game.app" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor app -&gt; game.app" />
   </component>
   <component name="WindowStateProjectService">
     <state x="517" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588508386585">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="517" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1588508386585" />
-    <state x="393" y="6" key="CommitChangelistDialog2" timestamp="1588589821048">
+    <state x="393" y="6" key="CommitChangelistDialog2" timestamp="1588597407302">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588589821048" />
+    <state x="393" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588597407302" />
     <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1588100240905">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -205,9 +210,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="694" y="152" width="763" height="526" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1588593640870" />
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588593671590">
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588594569675">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588593671590" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588594569675" />
   </component>
 </project>

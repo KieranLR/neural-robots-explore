@@ -17,7 +17,7 @@ export default class Sprite extends GameComponent {
         else {
             this.sprite = new PIXI.Sprite();
         }
-        this.game.app.stage.addChild(this.sprite);
+        this.game.viewport.addChild(this.sprite);
         this.sprite.x = this.parent.components.transform.pos.x;
         this.sprite.y = this.parent.components.transform.pos.y;
         this.sprite.scale.x = .5;

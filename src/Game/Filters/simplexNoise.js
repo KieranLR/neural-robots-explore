@@ -11,7 +11,7 @@ precision mediump float;
 vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
 vec2 mod289(vec2 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
 vec3 permute(vec3 x) { return mod289(((x*34.0)+1.0)*x); }
-
+uniform vec2 position;
 //
 // Description : GLSL 2D simplex noise function
 //      Author : Ian McEwan, Ashima Arts
@@ -23,7 +23,6 @@ vec3 permute(vec3 x) { return mod289(((x*34.0)+1.0)*x); }
 //  https://github.com/ashima/webgl-noise
 //
 float snoise(vec2 v) {
-
     // Precompute values for skewed triangular grid
     const vec4 C = vec4(0.211324865405187,
         // (3.0-sqrt(3.0))/6.0
@@ -82,7 +81,7 @@ float snoise(vec2 v) {
 }
 
 void main() {
-    vec2 stt = (floor((gl_FragCoord.xy)/16.)) / 16.;
+    vec2 stt = (floor((gl_FragCoord.xy + position * 200.)/16.)) / 16.;
     vec3 color = vec3(0.0);
 
     //color = vec3(floor((snoise(stt)*.5 + .5)+ .5));

@@ -14,6 +14,7 @@ const Header = styled.div`
   font-size: calc(10px + 2vmin);
   color: white;
   padding: 10px 0;
+  overflow: hidden;
 `;
 
 
