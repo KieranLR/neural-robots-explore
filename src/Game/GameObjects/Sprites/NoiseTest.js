@@ -1,16 +1,22 @@
 import GameObject from "./../GameObject";
 import NoiseHelper from "../../../utilities/NoiseUtilities";
+import Transform from "../../GameComponents/Transform";
+import Sprite from "../../GameComponents/Sprite";
+import FilteredSprite from "../../GameComponents/FilteredSprite";
+import {simplexFilter} from "../../Filters/simplexNoise";
+
 export default class Actor extends GameObject {
-    constructor(app){
+    constructor(game){
         super();
-        this.app = app;
-        this.components = {};
-        this.noise = new NoiseHelper(10, {perlinGridWidth: 32, perlinGridHeight: 32, cellGridWidth: 64, cellGridHeight: 64});
+        this.game = game;
     }
 
     init() {
+        this.components = {};
+        this.components.transform = new Transform();
+        this.components.transform.pos.y = -1;
+        this.components.filteredSprite = new FilteredSprite(this.game, this, "", [simplexFilter({})]);
         super.init();
-        console.log(this.noise.ridgedPerlin(1 * 0.5, 1 * 0.5));
     }
 
     update() {

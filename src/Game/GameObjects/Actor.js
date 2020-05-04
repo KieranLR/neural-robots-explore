@@ -4,9 +4,9 @@ import Sprite from "../GameComponents/Sprite"
 import KeyBoardController from "../GameComponents/KeyboardController";
 
 export default class Actor extends GameObject {
-    constructor(app){
+    constructor(game){
         super();
-        this.app = app;
+        this.game = game;
         this.components = {};
         this.banana = "Hey!";
     }
@@ -14,8 +14,8 @@ export default class Actor extends GameObject {
     init() {
         this.components.transform = new Transform();
         this.components.transform.pos.y = -1;
-        this.components.sprite = new Sprite(this.app, this, "wash");
-        this.components.keyBoardController = new KeyBoardController(this.app, this);
+        this.components.sprite = new Sprite(this.game, this, "wash");
+        this.components.keyBoardController = new KeyBoardController(this.game, this);
         super.init();
     }
 

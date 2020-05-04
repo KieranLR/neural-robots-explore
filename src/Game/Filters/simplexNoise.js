@@ -1,4 +1,6 @@
 //https://thebookofshaders.com/edit.php#11/2d-snoise-clear.frag
+import * as PIXI from "pixi.js";
+
 export const simpleNoise = `
 
 #ifdef GL_ES
@@ -89,3 +91,7 @@ void main() {
 }
 
 `;
+
+export const simplexFilter = (uniforms) => {
+    return new PIXI.Filter(null, simpleNoise, uniforms);
+};
