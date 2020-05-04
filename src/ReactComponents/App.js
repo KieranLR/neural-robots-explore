@@ -13,6 +13,7 @@ const Header = styled.div`
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 10px 0;
 `;
 
 
@@ -20,7 +21,6 @@ function App() {
   return (
     <div className="App">
       <Header>
-          {/*<PixiRenderTest/>*/}
           <GameRenderer/>
       </Header>
     </div>

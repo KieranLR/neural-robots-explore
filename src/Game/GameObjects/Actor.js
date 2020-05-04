@@ -1,6 +1,7 @@
 import GameObject from "./GameObject";
 import Transform from "../GameComponents/Transform";
 import Sprite from "../GameComponents/Sprite"
+import KeyBoardController from "../GameComponents/KeyboardController";
 
 export default class Actor extends GameObject {
     constructor(app){
@@ -13,7 +14,8 @@ export default class Actor extends GameObject {
     init() {
         this.components.transform = new Transform();
         this.components.transform.pos.y = -1;
-        this.components.sprite = new Sprite(this.app, this, "squad");
+        this.components.sprite = new Sprite(this.app, this, "wash");
+        this.components.keyBoardController = new KeyBoardController(this.app, this);
         super.init();
     }
 

@@ -1,18 +1,18 @@
 import GameComponent from "./GameComponent";
 import * as PIXI from "pixi.js";
 export default class Sprite extends GameComponent {
-    constructor(app, GameObjectParent, name){
+    constructor(app, parent, name){
         super();
-        name = "squad";
+
         this.app = app;
         this.name = name;
-        this.parent = GameObjectParent;
+        this.parent = parent;
 
     }
 
     init() {
         console.log(this);
-        this.avatar = new PIXI.Sprite(this.app.loader.resources["squad"].texture);
+        this.avatar = new PIXI.Sprite(this.app.loader.resources[this.name].texture);
         this.app.stage.addChild(this.avatar);
         this.avatar.x = this.parent.components.transform.pos.x;
         this.avatar.y = this.parent.components.transform.pos.y;

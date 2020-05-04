@@ -10,7 +10,6 @@ export default class GameObject {
     };
 
     update() {
-        console.log("Got call")
         Object.keys(this.components).forEach((componentKey) => {
             this.components[componentKey].update();
         });

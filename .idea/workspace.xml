@@ -2,14 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8064e189-21f8-4c10-acc4-8d6475f50610" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Game/GameComponents/Sprite.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/PixiController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/GameComponents/KeyboardController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/GameObjects/Sprites/NoiseTest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/Shaders/basicShader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/Shaders/simplexNoise.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/references" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utilities/Keyboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utilities/NoiseUtilities.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/GameComponents/Component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameComponents/GameComponent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/GameComponents/Transform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameComponents/Transform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/GameComponents/Sprite.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameComponents/Sprite.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/GameObjects/Actor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameObjects/Actor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/GameObjects/GameObject.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameObjects/GameObject.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/GameRenderer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameRenderer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/PixiController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/PixiController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ReactComponents/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReactComponents/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +117,9 @@
       <workItem from="1588317718153" duration="6091000" />
       <workItem from="1588368587556" duration="24000" />
       <workItem from="1588456079460" duration="1599000" />
-      <workItem from="1588499362617" duration="5047000" />
+      <workItem from="1588499362617" duration="8186000" />
+      <workItem from="1588543233504" duration="929000" />
+      <workItem from="1588559047824" duration="7338000" />
     </task>
     <task id="LOCAL-00001" summary="Add basic 2D rendering, and basic image tensorflow model.">
       <created>1588253561082</created>
@@ -133,7 +142,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588457669631</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Restructure Game Renderer">
+      <created>1588505722952</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1588505722952</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -143,44 +159,49 @@
     <MESSAGE value="Add basic 2D rendering, and basic image tensorflow model." />
     <MESSAGE value="Load Tf model inputs" />
     <MESSAGE value="Add Game Primitives. (GameObject and GameComponent)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Game Primitives. (GameObject and GameComponent)" />
+    <MESSAGE value="Restructure Game Renderer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Restructure Game Renderer" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="517" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588253289319">
+    <state x="517" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588508386585">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="517" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1588253289319" />
-    <state x="393" y="6" key="CommitChangelistDialog2" timestamp="1588457668528">
+    <state x="517" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1588508386585" />
+    <state x="393" y="6" key="CommitChangelistDialog2" timestamp="1588505721817">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588457668528" />
+    <state x="393" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588505721817" />
     <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1588100240905">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="166" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1588100240905" />
-    <state width="1493" height="282" key="GridCell.Tab.0.bottom" timestamp="1588457692172">
+    <state width="1493" height="175" key="GridCell.Tab.0.bottom" timestamp="1588575694618">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588457692172" />
-    <state width="1493" height="282" key="GridCell.Tab.0.center" timestamp="1588457692172">
+    <state width="1493" height="175" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1588575694618" />
+    <state width="1493" height="175" key="GridCell.Tab.0.center" timestamp="1588575694618">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588457692172" />
-    <state width="1493" height="282" key="GridCell.Tab.0.left" timestamp="1588457692172">
+    <state width="1493" height="175" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1588575694618" />
+    <state width="1493" height="175" key="GridCell.Tab.0.left" timestamp="1588575694617">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588457692172" />
-    <state width="1493" height="282" key="GridCell.Tab.0.right" timestamp="1588457692172">
+    <state width="1493" height="175" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1588575694617" />
+    <state width="1493" height="175" key="GridCell.Tab.0.right" timestamp="1588575694618">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="282" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588457692172" />
+    <state width="1493" height="175" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1588575694618" />
     <state x="0" y="147" key="Vcs.Push.Dialog.v2" timestamp="1588457673503">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="0" y="147" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1588457673503" />
-    <state x="465" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1588501213149">
+    <state x="465" y="235" key="com.intellij.ide.util.TipDialog" timestamp="1588562317428">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="235" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588501213149" />
+    <state x="465" y="235" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1588562317428" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588565372349">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588565372349" />
   </component>
 </project>

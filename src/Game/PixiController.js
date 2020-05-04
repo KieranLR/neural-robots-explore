@@ -6,11 +6,14 @@ import nebula from "../assets/images/Nebula.jpg"
 import snapChat from "../assets/images/Snapchat-1217206683[1].jpg"
 import squad from "../assets/images/squad picture.png"
 import Actor from "./GameObjects/Actor";
+import NoiseTest from "./GameObjects/Sprites/NoiseTest";
+import {noiseFrag} from "./Shaders/basicShader";
+import {simpleNoise} from "./Shaders/simplexNoise";
 
 class PixiController {
     constructor(controller, updateController) {
         this.app = new PIXI.Application({ width: 800, height: 600, backgroundColor: 0x1099bb });
-        this.gameObjects = [new Actor(this.app)];
+        this.gameObjects = [new Actor(this.app), new NoiseTest(this.app)];
         this.updateController = updateController;
         this.controller = controller;
     }
@@ -48,9 +51,19 @@ class PixiController {
     };
 
     initialize() {
+
         this.gameObjects.forEach((gameObject) => {
             gameObject.init();
         });
+
+        const container = new PIXI.Sprite();
+        container.filterArea = new PIXI.Rectangle(0, 0, this.app.screen.width, this.app.screen.height);
+        this.app.stage.addChild(container);
+        const filter = new PIXI.Filter(null, simpleNoise, {
+            amount: 10,
+        });
+        container.filters = [filter];
+
 
         this.app.ticker.add(() => {
             this.update();
