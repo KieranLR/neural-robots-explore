@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8064e189-21f8-4c10-acc4-8d6475f50610" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/tanks.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/tanks.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Game/GameComponents/RigidBody.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/my-model.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/my-model.weights.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/GameComponents/RobotAI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/GameObjects/Robot.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Game/World.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/GameComponents/KeyboardController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameComponents/KeyboardController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/GameComponents/Sprite.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameComponents/Sprite.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/GameComponents/Transform.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameComponents/Transform.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/GameObjects/Actor.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameObjects/Actor.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Game/PixiController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/PixiController.js" afterDir="false" />
     </list>
@@ -43,7 +42,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Game/GameObjects" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -62,6 +61,7 @@
       <recent name="C:\Users\Kieran\PhpstormProjects\snorp\src\ReactComponents" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kieran\PhpstormProjects\snorp\public" />
       <recent name="C:\Users\Kieran\PhpstormProjects\snorp\src\Game\GameObjects" />
     </key>
   </component>
@@ -114,7 +114,7 @@
       <workItem from="1588543233504" duration="929000" />
       <workItem from="1588559047824" duration="14960000" />
       <workItem from="1588681391706" duration="668000" />
-      <workItem from="1588761040426" duration="10402000" />
+      <workItem from="1588761040426" duration="12327000" />
     </task>
     <task id="LOCAL-00001" summary="Add basic 2D rendering, and basic image tensorflow model.">
       <created>1588253561082</created>
@@ -165,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588597428954</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add Rotation, Torque, and a Robot Image.">
+      <created>1588785688007</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1588785688007</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,17 +186,18 @@
     <MESSAGE value="Add Simplex Noise Shader" />
     <MESSAGE value="Refactor app -&gt; game.app" />
     <MESSAGE value="Add Viewport&#10;- Adds Scrolling to the noise" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Viewport&#10;- Adds Scrolling to the noise" />
+    <MESSAGE value="Add Rotation, Torque, and a Robot Image." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Rotation, Torque, and a Robot Image." />
   </component>
   <component name="WindowStateProjectService">
     <state x="517" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588508386585">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="517" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1588508386585" />
-    <state x="393" y="6" key="CommitChangelistDialog2" timestamp="1588597428114">
+    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1588785687089">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588597428114" />
+    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588785687089" />
     <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1588100240905">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -222,9 +230,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="694" y="152" width="763" height="526" key="find.popup/0.0.1536.824@0.0.1536.824" timestamp="1588785007678" />
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588784976520">
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1588785771321">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588784976520" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1588785771321" />
   </component>
 </project>

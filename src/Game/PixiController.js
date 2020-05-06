@@ -8,6 +8,8 @@ import snapChat from "../assets/images/Snapchat-1217206683[1].jpg"
 import squad from "../assets/images/squad picture.png"
 import Actor from "./GameObjects/Actor";
 import NoiseTest from "./GameObjects/Sprites/NoiseTest";
+import Robot from "./GameObjects/Robot";
+import World from "./World";
 
 function noScroll() {
     window.scrollTo(0, 0);
@@ -28,8 +30,8 @@ class PixiController {
             worldHeight: 600,
             interaction: this.game.app.renderer.plugins.interaction // the interaction module is important for wheel to work properly when renderer.view is placed or scaled
         });
-
-        this.gameObjects = [new NoiseTest(this.game), new Actor(this.game)];
+        this.world = new World(this.game);
+        this.gameObjects = this.world.gameObjects;
         this.updateController = updateController;
         this.controller = controller;
     }
@@ -68,6 +70,8 @@ class PixiController {
         this.game.viewport.drag({wheel: false})
             .decelerate()
             .pinch()
+            .wheel()
+            .drag()
         ;
 
         const sprite = this.game.viewport.addChild(new PIXI.Sprite(PIXI.Texture.WHITE))
