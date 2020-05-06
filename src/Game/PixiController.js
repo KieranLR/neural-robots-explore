@@ -53,6 +53,8 @@ class PixiController {
 
     //Load Images
     setup() {
+        console.log(process.env);
+        console.log(squad);
         this.game.app.loader
             .add("dog", dogImage)
             .add("wash", wash)
@@ -60,6 +62,7 @@ class PixiController {
             .add("nebula", nebula)
             .add("snap", snapChat)
             .add("squad", squad)
+            .add("tanks", process.env.PUBLIC_URL + "/tanks.json")
             .load(() => this.initialize());
         this.game.app.stage.addChild(this.game.viewport);
         this.game.viewport.drag({wheel: false})
