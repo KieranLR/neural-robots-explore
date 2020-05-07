@@ -26,8 +26,8 @@ export default class Sprite extends GameComponent {
         this.game.viewport.addChild(this.sprite);
         this.sprite.x = this.parent.components.transform.pos.x;
         this.sprite.y = this.parent.components.transform.pos.y;
-        this.sprite.scale.x = .5;
-        this.sprite.scale.y = .5;
+        this.sprite.scale.x = 0.5 ;
+        this.sprite.scale.y = 0.5 ;
         this.sprite.anchor.set(0.5, 0.5);
         this.sprite.rotation = this.parent.components.transform.rotation;
     };
