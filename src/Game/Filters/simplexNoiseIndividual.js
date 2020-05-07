@@ -1,7 +1,7 @@
 //https://thebookofshaders.com/edit.php#11/2d-snoise-clear.frag
 import * as PIXI from "pixi.js";
 
-export const simpleNoise = `
+export const simpleNoiseIndividual = `
 
 #ifdef GL_ES
 precision mediump float;
@@ -22,7 +22,7 @@ float isHundo(float x, float y) {
     }
 
 vec2 getPos(vec2 x) {
-    return (gl_FragCoord.xy + position * 200.) / 16.;
+    return (gl_FragCoord.xy + position * 12.5);
 }
 
 //
@@ -107,6 +107,6 @@ void main() {
 
 `;
 
-export const simplexFilter = (uniforms) => {
-    return new PIXI.Filter(null, simpleNoise, uniforms);
+export const simplexFilterIndividual = (uniforms) => {
+    return new PIXI.Filter(null, simpleNoiseIndividual, uniforms);
 };

@@ -6,7 +6,7 @@ import * as PIXI from "pixi.js";
 import FilteredSprite from "../../GameComponents/FilteredSprite";
 import {simplexFilter, simpleNoise} from "../../Filters/simplexNoise";
 
-export default class Actor extends GameObject {
+export default class NoiseTest extends GameObject {
     constructor(game){
         super();
         this.game = game;
@@ -28,7 +28,6 @@ export default class Actor extends GameObject {
     update() {
         //console.log(this.game.viewport.lastViewport.x);
         super.update();
-        this.bone++;
         this.filter.uniforms.position.x = -1 * this.game.viewport.lastViewport.x / 200;
         this.filter.uniforms.position.y = 1 * this.game.viewport.lastViewport.y / 200;
     }

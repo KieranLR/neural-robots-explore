@@ -11,8 +11,8 @@ export default class Transform extends GameComponent {
         this.angularAcceleration = 0;
     }
 
-    getHeading() {
-        return {x: Math.cos(this.rotation), y: Math.sin(this.rotation)};
+    getHeading(multiply) {
+        return {x: Math.cos(this.rotation) * multiply, y: Math.sin(this.rotation) * multiply};
     }
 
     init() {

@@ -70,7 +70,6 @@ class PixiController {
         this.game.viewport.drag({wheel: false})
             .decelerate()
             .pinch()
-            .wheel()
             .drag()
         ;
 

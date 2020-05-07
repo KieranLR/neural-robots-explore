@@ -16,6 +16,7 @@ export default class Robot extends GameObject {
         this.leftTorque = 0;
         this.rightTorque = 0;
         this.rng = new seedrandom(seed);
+        this.speed = .2;
     }
 
     init() {
@@ -34,9 +35,9 @@ export default class Robot extends GameObject {
     update() {
         //console.log("Got Called");
         super.update();
-        const left = this.rng();
-        const right = this.rng();
-        const top = this.rng();
+        const left = this.rng() * this.speed ;
+        const right = this.rng()  * this.speed;
+        const top = this.rng()  * this.speed;
 
         const headingx = this.components.transform.getHeading().x;
         const headingy = this.components.transform.getHeading().y;
@@ -45,8 +46,8 @@ export default class Robot extends GameObject {
         this.leftForce = {x: headingx * left, y: headingy * left};
         this.rightForce =  {x: headingx * right, y: headingy * right};
         this.topForce =  {x: headingx * top, y: headingy * top};
-        this.leftTorque = left * 500;
-        this.rightTorque = right * -500;
+        this.leftTorque = left * 300;
+        this.rightTorque = right * -300;
         this.components.rigidBody.reset();
         this.components.rigidBody.addForce(this.leftForce);
         this.components.rigidBody.addForce(this.rightForce);
