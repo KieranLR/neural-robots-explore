@@ -80,10 +80,10 @@ Go to src/Game/GameObjects/Sprites/RoboDisplay.js
 Then, in the init() function, replace ./myModel.json with your .json file. It should automatically will load your weights file. 
 
 
-  tf.loadLayersModel("your-file.json").then(
+ ` tf.loadLayersModel("your-file.json").then(
             (model) => {
                 this.model = model;
             }
-        );
+        );`
 
 
