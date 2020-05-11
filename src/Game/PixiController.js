@@ -10,6 +10,8 @@ import Actor from "./GameObjects/Actor";
 import NoiseTest from "./GameObjects/Sprites/NoiseTest";
 import Robot from "./GameObjects/Robot";
 import World from "./World";
+import {useSelector} from "react-redux";
+import {initialState} from "../Redux/initialState";
 
 function noScroll() {
     window.scrollTo(0, 0);
@@ -19,7 +21,7 @@ function noScroll() {
 window.addEventListener('scroll', noScroll);
 
 class PixiController {
-    constructor(controller, updateController) {
+    constructor(objects, dispatch) {
         this.game = {};
         this.game.app = new PIXI.Application({ width: 800, height: 600, backgroundColor: 0x1099bb });
         // create viewport
@@ -30,10 +32,12 @@ class PixiController {
             worldHeight: 600,
             interaction: this.game.app.renderer.plugins.interaction // the interaction module is important for wheel to work properly when renderer.view is placed or scaled
         });
-        this.world = new World(this.game);
+        this.gameData = initialState;
+        console.log(this.gameData);
+        this.world = new World(this.game, objects.notes, dispatch, this.gameData);
         this.gameObjects = this.world.gameObjects;
-        this.updateController = updateController;
-        this.controller = controller;
+        this.controller = {};
+
     }
 
     setController(newController) {
@@ -42,7 +46,7 @@ class PixiController {
 
     updatePixiController(element) {
         // the element is the DOM object that we will use as container to add pixi stage(canvas)
-        this.updateController(element);
+        //this.updateController(element);
         this.setController(element);
         //now we are adding the application to the DOM element which we got from the Ref.
         //This is called once
@@ -55,8 +59,6 @@ class PixiController {
 
     //Load Images
     setup() {
-        console.log(process.env);
-        console.log(squad);
         this.game.app.loader
             .add("dog", dogImage)
             .add("wash", wash)

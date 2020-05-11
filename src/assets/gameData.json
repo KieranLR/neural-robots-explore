@@ -1,0 +1,24 @@
+{
+  "notes": {
+    "messages": [
+      {
+        "name": "Note 1",
+        "message": "Hello Note!",
+        "location": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    ],
+    "images": [
+      {
+        "name": "Image 1",
+        "url": "./",
+        "location": {
+          "x": 0,
+          "y": 0
+        }
+      }
+    ]
+  }
+}

@@ -16,22 +16,22 @@ const images = [
 const trainModel = (setTensor) => {
     const model = tf.sequential();
 
-    model.add(tf.layers.flatten({inputShape: [32, 32, 3]}));
+    model.add(tf.layers.flatten({inputShape: [32, 32, 4]}));
     model.add(tf.layers.dense({units: 100, activation: 'relu'}));
-    model.add(tf.layers.dense({units: 8}));
+    model.add(tf.layers.dense({units: 3}));
 
 
     model.compile({loss: 'meanSquaredError', optimizer: 'sgd'});
 
-    const xs = tf.randomUniform([10, 32, 32, 3], 0, 1);
+    const xs = tf.randomUniform([10, 32, 32, 4], 0, 1);
     console.log("input image: " );
     tf.print(xs);
-    const ys = tf.randomUniform([10, 8], 0, 1);
+    const ys = tf.randomUniform([10, 3], 0, 1);
     console.log("output tensor");
     tf.print(ys);
     model.fit(xs, ys, {epochs: 50}).then(() => {
         model.save('downloads://my-model').then(() => console.log("I saved the model!"));
-        const prediction = tf.randomUniform([1, 32, 32, 3], 0, 1);
+        const prediction = tf.randomUniform([1, 32, 32, 4], 0, 1);
         const newTen = model.predict(prediction);
         tf.print(newTen);
         console.log("Trained model!");
@@ -45,7 +45,17 @@ const loadModel = (setTensor) => {
 }
 
 
-const TensorFlowTest = () => {
+export const TensorFlowTrain = () => {
+    const [out, setOut] = useState("Training Model");
+
+    useEffect(() => {
+        trainModel(setOut);
+    }, []);
+
+    return <div>{out}</div>
+}
+
+export const TensorFlowTest = () => {
     const [tensor, setTensor] = useState("Training the model...");
 
     useEffect(() => {
@@ -79,5 +89,3 @@ const TensorFlowTest = () => {
         <div>{tensor}</div>
     </div>;
 };
-
-export default TensorFlowTest;

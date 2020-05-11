@@ -2,6 +2,12 @@ import React from 'react';
 import './App.css';
 import styled from "styled-components";
 import GameRenderer from "./../Game/GameRenderer"
+import {TensorFlowTrain} from "../legacyCode/TensorFlowTest";
+import rootReducer from "./../Redux/Reducers/reducers"
+import {createStore} from "redux";
+import {Provider} from "react-redux"
+
+const store = createStore(rootReducer);
 
 const Header = styled.div`
     display: inline-block;
@@ -17,14 +23,22 @@ const Header = styled.div`
   overflow: hidden;
 `;
 
+const AppContainer = styled.div`
+    text-align: center;
+`;
+
 
 function App() {
   return (
-    <div className="App">
-      <Header>
-          <GameRenderer/>
-      </Header>
-    </div>
+      <Provider store = {store}>
+          <div className="App">
+              <Header>
+                  <GameRenderer/>
+                  <div id = "image">IMAGE HERE!</div>
+                  {/*<TensorFlowTrain/>*/}
+              </Header>
+          </div>
+      </Provider>
   );
 }
 

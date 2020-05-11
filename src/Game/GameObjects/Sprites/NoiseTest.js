@@ -4,7 +4,7 @@ import Transform from "../../GameComponents/Transform";
 import Sprite from "../../GameComponents/Sprite";
 import * as PIXI from "pixi.js";
 import FilteredSprite from "../../GameComponents/FilteredSprite";
-import {simplexFilter, simpleNoise} from "../../Filters/simplexNoise";
+import {simplexFilterIndividual} from "../../Filters/simplexNoiseIndividual";
 
 export default class NoiseTest extends GameObject {
     constructor(game){
@@ -17,12 +17,12 @@ export default class NoiseTest extends GameObject {
         this.components = {};
         this.components.transform = new Transform();
         this.components.transform.pos.y = -1;
-        this.filter = simplexFilter({
+        this.filter = simplexFilterIndividual({
+            res: new PIXI.Point(1, 1),
             position: new PIXI.Point(this.bone, this.bone),
         });
         this.components.filteredSprite = new FilteredSprite(this.game, this, "", [this.filter]);
         super.init();
-        console.log(this.game.viewport);
     }
 
     update() {
@@ -30,5 +30,6 @@ export default class NoiseTest extends GameObject {
         super.update();
         this.filter.uniforms.position.x = -1 * this.game.viewport.lastViewport.x / 200;
         this.filter.uniforms.position.y = 1 * this.game.viewport.lastViewport.y / 200;
+        this.filter.uniforms.res = {x: 16, y: 1};
     }
 }

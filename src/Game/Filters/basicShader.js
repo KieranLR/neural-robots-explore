@@ -1,4 +1,7 @@
-export const noiseFrag = `
+import * as PIXI from "pixi.js";
+import {simpleNoise} from "./simplexNoise";
+
+export const transparent = `
             precision highp float;
             
             varying vec2 vTextureCoord;
@@ -9,11 +12,13 @@ export const noiseFrag = `
             }
             
             void main() {
-              vec4 color = vec4(1.0, 1.0, 1.0, 1);
-                float diff = (rand(vTextureCoord) - 0.5) * amount;
-                color.r += diff;
-                color.g += diff;
-                color.b += diff;
+              vec4 color = vec4(1, 1, 1, 1);
                 gl_FragColor = color;
             }
             `;
+
+const transparentFilter = (uniforms) => {
+    return new PIXI.Filter(null, transparent, uniforms);
+};
+
+export default transparentFilter;
