@@ -86,4 +86,17 @@ Then, in the init() function, replace ./myModel.json with your .json file. It sh
             }
         );`
 
+## Cheating!
+It totally is possible to cheat this project. I don't care too much if you do, since the point of the project is just for you to have fun. I know you won't be satisfied with cheating anyways. 
+I'll try to make it kinda difficult to just directly access the file that stores where the notes are stored. Maybe I'll store the file online somewhere, and fetch it in. Right now it's just stored in objects.json. So go ahead and take a sneak peak and see if you can find the notes really far away by cheating. Maybe I'll leave one of the true notes in the same spot!
 
+As for directly editing the javascript game, go ahead! I recommend you at least try to make a few tensorflow models before trying to change the way the game works though. 
+I won't be documenting much of the game, so if say you want to modify the robot's base speed, you'd have to figure out how the code works first. 
+
+Editing the game files also will inevitably cause merge conflicts when I update the game. So modify at your own risk.
+I can help a little bit if you mess something up. Maybe. 
+
+## Getting Started
+
+More details on getting started can be found at the train-test branch. I wish you the best of luck. 
+https://github.com/KieranLR/neural-robots-explore/blob/train-test/README.md
