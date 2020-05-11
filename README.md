@@ -26,4 +26,13 @@ I will be updating this quite frequently these next few days. There is a lot to 
 I haven't even added in the win condition yet! If you have any suggestions, questions, comments, etc..
 Please feel free to let me know.
 
+### Important Notes
+
+You will want to die if you don't have a reasonable IDE if you do any work in Javascript for this project
+If you still have access to a .edu email, you can get access to JetBrains WebStorm, which is probably the best option for 
+Javascript IDE's these day. 
+
+If you don't, there is no need to worry. 
+Visual Studio Code is free, and is a completely reasonable option for working in Javascript. 
+Atom, is a nice open source free IDE you may have used before, that also can work with Javascript. 
 
