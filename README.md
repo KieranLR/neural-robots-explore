@@ -18,6 +18,7 @@ You may see robots moving around, and by moving your cursor, you may be able to 
 sample notes that I have added in. 
 
 To get started on the training neural network stuff, go ahead and switch over to the "train-test" branch
+https://github.com/KieranLR/neural-robots-explore/blob/train-test/README.md
 I may move this to it's own branch soon.
 
 ### Updates
