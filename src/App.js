@@ -1,8 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import PixiRenderTest from "./components/PixiRenderTest";
-import TensorFlowTest from "./components/TensorFlowTest";
+import {TensorFlowTrain} from "./components/TensorFlowTest/TensorFlowTest";
 import styled from "styled-components";
 
 const Header = styled.div`
@@ -22,8 +20,7 @@ function App() {
   return (
     <div className="App">
       <Header>
-          {/*<PixiRenderTest/>*/}
-          <TensorFlowTest/>
+          <TensorFlowTrain/>
       </Header>
     </div>
   );
