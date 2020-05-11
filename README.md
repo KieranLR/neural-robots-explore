@@ -52,7 +52,7 @@ This function will allow you to specify a time, and a tensorflow model, and will
     colorDistribution: {red: Percent, blue: Percent, green: Percent, ...} //Has a list of the percentage of time the robot spent on these colors
   }`
 
-This will allow you to do all sorts of fantastic things. My recommendation is to use a genetic algorithm to evolve your neural network. 
+  This will allow you to do all sorts of fantastic things. My recommendation is to use a genetic algorithm to evolve your neural network. 
 For example, make 100 randomly weighted neural networks. Run each of them through this function, and then reproduce say only the ones who travelled the most distance. This might result in robots who just blast forwards without any thought. Or you could only reproduce the ones who spent most of their time on the color Red. Who knows. I plan on outputting more things than what is listed for this function. Let me know what kinds of things you could use from this function, and I'll see if I can give them to you. 
 
 * In-game training. This one might take a while, but it is possible. It would allow you to train your model live as it is playing in the browser. So say you spawn in 100 robots, and watch them scramble around the screen. Given a fitness function passed in through javascript, you could have these robots reproduce, and die live while you're playing the game. You could watch them get smarter as you play. This would probably be the last thing I add to the project, but it certainly would be badass. 
