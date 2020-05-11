@@ -14,6 +14,14 @@ should open up a browser, to localhost:3000
 On this browser page, it will train and run a basic neural network using random 32 x 32 images
 Then, the browser will attempt to save this model to your downloads. 
 
+### Robots
+Robots take in an image from what's around them, run that through the tensorflow model, and use the 3 values returned to move. 
+
+The first value and third values are given to the left and right thrusters. This moves the robot forward, and also changes the direction it faces slightly to the left. 
+The second value is given to the forward thruster. This just moves the robot forward, at a much faster rate than the left and right thrusters. 
+
+I may add some visual feedback so you can see which thrusters are activating. 
+
 ## Training The Model
 
 In model.js, there is a function called trainmodel
@@ -22,7 +30,6 @@ This function trains a neural network using 50 32x32x4 tensors
 These 32x32x4 tensors represent a 32x32 pixel image with an alpha channel. 
 
 A model trained by this function is the one currently in use on the master branch.
-
 
 ### Where to start
 
