@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="8064e189-21f8-4c10-acc4-8d6475f50610" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/GameComponents/RenderedFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameComponents/RenderedFilter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/GameObjects/Robot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameObjects/Robot.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Game/World.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/World.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,17 +62,17 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\PhpStorm 2019.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Kieran\PhpstormProjects\snorp\src\Game\Filters" />
-      <recent name="C:\Users\Kieran\PhpstormProjects\snorp\public" />
-      <recent name="C:\Users\Kieran\PhpstormProjects\snorp\src\Game\GameObjects" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Kieran\PhpstormProjects\snorp\src\Redux\Reducers" />
       <recent name="C:\Users\Kieran\PhpstormProjects\snorp\public" />
       <recent name="C:\Users\Kieran\PhpstormProjects\snorp\src\Game\GameObjects\Sprites" />
       <recent name="C:\Users\Kieran\PhpstormProjects\snorp\src\assets\images" />
       <recent name="C:\Users\Kieran\PhpstormProjects\snorp\src\Game" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Kieran\PhpstormProjects\snorp\src\Game\Filters" />
+      <recent name="C:\Users\Kieran\PhpstormProjects\snorp\public" />
+      <recent name="C:\Users\Kieran\PhpstormProjects\snorp\src\Game\GameObjects" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">

@@ -7,5 +7,23 @@ This is the Javascript game repository.
 
 ### Getting Started
 
+clone the repository at: https://github.com/KieranLR/neural-robots-explore
+
+run "npm start" on your command line. 
+
+This will host a Node.js web server. A browser window to localhost:3000 should show up,
+and it should take you to a display of a colorful pixelated plainish background. 
+
+You may see robots moving around, and by moving your cursor, you may be able to uncover some of the
+sample notes that I have added in. 
+
+To get started on the training neural network stuff, go ahead and switch over to the "train-test" branch
+I may move this to it's own branch soon.
+
+### Updates
+
+I will be updating this quite frequently these next few days. There is a lot to improve, and 
+I haven't even added in the win condition yet! If you have any suggestions, questions, comments, etc..
+Please feel free to let me know.
 
 
