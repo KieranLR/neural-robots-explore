@@ -37,7 +37,7 @@ If you don't, there is no need to worry.
 Visual Studio Code is free, and is a completely reasonable option for working in Javascript. 
 Atom, is a nice open source free IDE you may have used before, that also can work with Javascript. 
 
-### Game Details
+## Game Details
 This game was made using React js, and Pixi js. 
 
 #### React
@@ -61,6 +61,29 @@ https://github.com/KieranLR/neural-robots-explore/tree/master/src/Game
 If you would like, I can give you permissions to make push to the repository. I may prevent you from pushing to master though. 
 Alternatively, you can fork the repository, and merge in updates as I make them. It really depends on what you're most comfortable with.
 
+### Winning
+So far, there aren't any of the real notes added in yet. There are 13 placeholders, some of which are absurd to find. Don't worry about finding these.
+When you hover over them, they will become visible, and when you click them, it will add them to your list of collected notes. 
+This list is stored in localstorage. 
+Localstorage is a dictionary of key-values stored in your browser. Try not to clear browser history too while working on the project, as it may reset your progress. 
 
+## Adding Your Neural Network to the robots. 
+In my next update to the project, I'll be adding a Button that you can click to add your own model to the project. 
+To prevent you having to do this every time you refresh the page, I will be saving the model in localstorage.
+
+If you want to try adding your own model before I make that update, the process is a little bit more finnicky (meaning I hard coded it in a random file haha).
+First, make sure your model is saved as .weights.bin, and .json files. This is done by default on the train-test branch. 
+
+Place these files in the public/ folder. You'll see another model called myModel there. 
+
+Go to src/Game/GameObjects/Sprites/RoboDisplay.js
+Then, in the init() function, replace ./myModel.json with your .json file. It should automatically will load your weights file. 
+
+
+  tf.loadLayersModel("your-file.json").then(
+            (model) => {
+                this.model = model;
+            }
+        );
 
 
