@@ -26,7 +26,7 @@ export default class World {
         });
 
         //Add Robots
-        for (let i = 0; i < 25; i++) {
+        for (let i = 0; i < 2; i++) {
             this.gameObjects.push(new RoboDisplay(game, i));
         }
     }

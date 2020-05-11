@@ -40,18 +40,18 @@ export default class RenderedFilter extends GameComponent {
     update() {
         super.update();
         this.wait++;
-        if (1) {
+        if (this.wait % 2 === 0) {
             //const imgElement = document.getElementById('image');
             //const image = this.game.app.renderer.plugins.extract.image(this.rSprite);
             //console.log(image);
             //image.style.width = "100px";
             //const oldImage = imgElement.firstChild;
             //imgElement.replaceChild(image, oldImage);
-            //const tensorImage = this.game.app.renderer.plugins.extract.pixels(this.rSprite);
-            //const roboInstructions = this.parent.testModel(tensorImage);
-            //if (roboInstructions) {
-                //this.parent.robot.updateInstructions(roboInstructions.arraySync());
-            //}//document.body.appendChild(image);
+            const tensorImage = this.game.app.renderer.plugins.extract.pixels(this.rSprite);
+            const roboInstructions = this.parent.testModel(tensorImage);
+            if (roboInstructions) {
+                this.parent.robot.updateInstructions(roboInstructions.arraySync());
+            }//document.body.appendChild(image);
             //console.log(this.rSprite);
         }
 

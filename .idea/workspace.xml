@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8064e189-21f8-4c10-acc4-8d6475f50610" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ReactComponents/NoteDisplay.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ReactComponents/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/ReactComponents/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Redux/initialState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Redux/initialState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/gameData.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/gameData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/GameComponents/RenderedFilter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameComponents/RenderedFilter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/GameObjects/Robot.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/GameObjects/Robot.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Game/World.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Game/World.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +131,7 @@
       <workItem from="1588853129530" duration="18050000" />
       <workItem from="1588928783038" duration="773000" />
       <workItem from="1589014071044" duration="10603000" />
-      <workItem from="1589135649743" duration="20720000" />
+      <workItem from="1589135649743" duration="21442000" />
     </task>
     <task id="LOCAL-00001" summary="Add basic 2D rendering, and basic image tensorflow model.">
       <created>1588253561082</created>
@@ -235,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589164141095</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Add interface for viewing collected notes">
+      <created>1589166695547</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1589166695547</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,17 +259,18 @@
     <MESSAGE value="Get Sprite texture." />
     <MESSAGE value="Add React State storage for collected notes. &#10;Add visual update (Colors woohoo)" />
     <MESSAGE value="Store Notes in local storage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Store Notes in local storage" />
+    <MESSAGE value="Add interface for viewing collected notes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add interface for viewing collected notes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="517" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588508386585">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="517" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1588508386585" />
-    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1589164140384">
+    <state x="393" y="0" key="CommitChangelistDialog2" timestamp="1589166694704">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589164140384" />
+    <state x="393" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589166694704" />
     <state x="94" y="100" width="797" height="630" key="DiffContextDialog" timestamp="1588877607698">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -311,9 +315,9 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1589159146106" />
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589166678382">
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1589166849637">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589166678382" />
+    <state x="430" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1589166849637" />
   </component>
 </project>

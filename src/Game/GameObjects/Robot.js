@@ -24,9 +24,9 @@ export default class Robot extends GameObject {
 
     init() {
         this.components.transform = new Transform();
-        this.components.transform.pos.x = 300;
-        this.components.transform.pos.y = 400;
-        this.components.transform.rotation = -3.1415 / 2;
+        this.components.transform.pos.x = this.rng() * 1000 - 500;
+        this.components.transform.pos.y = this.rng() * 1000 - 500;
+        this.components.transform.rotation = this.rng() * Math.PI;
         this.components.rigidBody = new RigidBody(this.game, this, 300, 400);
         this.components.sprite = new Sprite(this.game, this, "tanks", "Light.png");
         super.init();
@@ -38,12 +38,12 @@ export default class Robot extends GameObject {
     update() {
         //console.log("Got Called");
         super.update();
-         this.left = this.rng() * this.speed ;
-         this.right = this.rng()  * this.speed;
-         this.top = this.rng()  * this.speed;
+         //this.left = this.rng() * this.speed ;
+         //this.right = this.rng()  * this.speed;
+         //this.top = this.rng()  * this.speed;
 
-         const headingx = this.components.transform.getHeading(1.0).x;
-         const headingy = this.components.transform.getHeading(1.0).y;
+         const headingx = this.components.transform.getHeading(2.0).x;
+         const headingy = this.components.transform.getHeading(2.0).y;
         //
         //
          this.leftForce = {x: headingx * this.left, y: headingy * this.left * 0.25};
