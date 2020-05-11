@@ -45,11 +45,12 @@ Here are the things I do plan on doing to make this project possible:
 * A function that simulates a robot's lifetime, and returns output based on how it did. This one will likey be the most useful to you. 
 This function will allow you to specify a time, and a tensorflow model, and will run a robot (Won't display anything to the screen) for that much time, and return an object similar in structure to this: 
 
-  `{timeAlive: Float \n
+    timeAlive: Float \n
     distanceTravelled: Float
     notesFound: Integer
-    colorDistribution: {red: Percent, blue: Percent, green: Percent, ...} //Has a list of the percentage of time the robot spent on these colors
-  }`
+    colorDistribution: {red: Percent, blue: Percent, green: Percent, ...} //Has a list of the percentage of time the robot spent on
+    these colors
+  
 
   This will allow you to do all sorts of fantastic things. My recommendation is to use a genetic algorithm to evolve your neural network. 
 For example, make 100 randomly weighted neural networks. Run each of them through this function, and then reproduce say only the ones who travelled the most distance. This might result in robots who just blast forwards without any thought. Or you could only reproduce the ones who spent most of their time on the color Red. Who knows. I plan on outputting more things than what is listed for this function. Let me know what kinds of things you could use from this function, and I'll see if I can give them to you. 
