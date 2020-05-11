@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8064e189-21f8-4c10-acc4-8d6475f50610" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/TensorFlowTest/TensorFlowTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/PixiRenderTest.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/TensorFlowTest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TensorFlowTest/TensorFlowTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TensorFlowTest/TensorFlowTest.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588253561082</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add Documentation for Training a test model">
+      <created>1589168705299</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1589168705299</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -136,17 +140,18 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add basic 2D rendering, and basic image tensorflow model." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add basic 2D rendering, and basic image tensorflow model." />
+    <MESSAGE value="Add Documentation for Training a test model" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Documentation for Training a test model" />
   </component>
   <component name="WindowStateProjectService">
     <state x="517" y="214" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1588253289319">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="517" y="214" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1536.824@0.0.1536.824" timestamp="1588253289319" />
-    <state x="393" y="6" key="CommitChangelistDialog2" timestamp="1588253560013">
+    <state x="393" y="6" key="CommitChangelistDialog2" timestamp="1589168704537">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1588253560013" />
+    <state x="393" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1589168704537" />
     <state x="549" y="166" key="FileChooserDialogImpl" timestamp="1588100240905">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

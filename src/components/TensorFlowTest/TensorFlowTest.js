@@ -48,7 +48,7 @@ export const TensorFlowTrain = () => {
 
     //Basically, run trainModel once as soon as the page loads.
     useEffect(() => {
-        trainModel(text);
+        trainModel(setText);
     }, []);
 
     //Display a message
