@@ -12,7 +12,7 @@ if (localStorage.getItem("notes") === null) {
         })
     }
 } else {
-    notes = localStorage.getItem("notes");
+    notes = JSON.parse(localStorage.getItem("notes"));
 }
 
 export const initialState = {

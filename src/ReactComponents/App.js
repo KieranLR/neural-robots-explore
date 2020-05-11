@@ -6,11 +6,13 @@ import {TensorFlowTrain} from "../legacyCode/TensorFlowTest";
 import rootReducer from "./../Redux/Reducers/reducers"
 import {createStore} from "redux";
 import {Provider} from "react-redux"
+import NoteDisplay from "./NoteDisplay";
 
 const store = createStore(rootReducer);
 
 const Header = styled.div`
-    display: inline-block;
+    display: grid;
+    grid-template-columns: 1fr 500px;
     background-color: #282c34;
   min-height: 100vh;
   width: 100%;
@@ -34,7 +36,7 @@ function App() {
           <div className="App">
               <Header>
                   <GameRenderer/>
-                  {/*<TensorFlowTrain/>*/}
+                  <NoteDisplay/>
               </Header>
           </div>
       </Provider>
