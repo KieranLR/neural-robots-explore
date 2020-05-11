@@ -3,14 +3,17 @@ const val = {
     collected: false
 };
 
-const notes = [];
-
-for (let i = 0; i < 25; i++) {
-    notes.push({
-        collected: false
-    })
+let notes;
+if (localStorage.getItem("notes") === null) {
+    notes = [];
+    for (let i = 0; i < 25; i++) {
+        notes.push({
+            collected: false
+        })
+    }
+} else {
+    notes = localStorage.getItem("notes");
 }
-
 
 export const initialState = {
     game: {

@@ -10,6 +10,13 @@ export default function game(state = initialState, action) {
         case "SET_NOTE": {
             const notes = newState.game.notesCollected;
             notes[action.note].collected = true;
+            localStorage.setItem("notes", JSON.stringify(notes));
+
+            const storedNotes = JSON.parse(localStorage.getItem("notes"));
+            storedNotes[action.note] = true;
+            localStorage.setItem("notes", JSON.stringify(notes));
+
+
             return newState;
         }
         default:

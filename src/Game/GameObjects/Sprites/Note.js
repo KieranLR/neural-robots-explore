@@ -28,9 +28,10 @@ export default class Note extends GameObject {
         super.init();
         this.components.sprite.sprite.on('mousedown', () => this.setNote({}));
         this.components.sprite.sprite.on('touchstart', () => this.setNote({}));
+        this.components.sprite.sprite.on('mouseover', () => this.components.sprite.sprite.alpha = 1);
         this.components.sprite.sprite.width = 100;
         this.components.sprite.sprite.height = 100;
-        this.components.sprite.sprite.alpha = 0.2;
+        this.components.sprite.sprite.alpha = 0;
         this.components.sprite.sprite.interactive = true;
 
         this.components.sprite.sprite.buttonMode= true;
@@ -40,6 +41,9 @@ export default class Note extends GameObject {
 
     update() {
         super.update();
+        if (this.components.sprite.sprite.alpha >= 0.2) {
+            this.components.sprite.sprite.alpha -= 0.005;
+        }
     }
 
     setNote() {

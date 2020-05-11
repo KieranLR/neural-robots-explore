@@ -34,7 +34,6 @@ function App() {
           <div className="App">
               <Header>
                   <GameRenderer/>
-                  <div id = "image">IMAGE HERE!</div>
                   {/*<TensorFlowTrain/>*/}
               </Header>
           </div>

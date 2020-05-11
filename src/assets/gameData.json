@@ -8,6 +8,94 @@
           "x": 0,
           "y": 0
         }
+      },
+      {
+        "name": "Note 2",
+        "message": "This is a newer note!",
+        "location": {
+          "x": 700,
+          "y": 300
+        }
+      },
+      {
+        "name": "Note 3",
+        "message": "This note is far away!",
+        "location": {
+          "x": 10000,
+          "y": 0
+        }
+      },
+      {
+        "name": "Note 4",
+        "message": "This note is lame",
+        "location": {
+          "x": -500,
+          "y": 500
+        }
+      },
+      {
+        "name": "Note 5",
+        "message": "These notes shouldn't be stored in a json file",
+        "location": {
+          "x": 400,
+          "y": -200
+        }
+      },
+      {
+        "name": "Note 6",
+        "message": "Number 6 note",
+        "location": {
+          "x": 10,
+          "y": -900
+        }
+      },
+      {
+        "name": "Note 7",
+        "message": "Writing these notes takes a little bit longer than I wanted it to",
+        "location": {
+          "x": 900,
+          "y": -900
+        }
+      },
+      {
+        "name": "Note 8",
+        "message": "PIece of Fart",
+        "location": {
+          "x": 3000,
+          "y": 0
+        }
+      },
+      {
+        "name": "Note 9",
+        "message": "HNOooastes",
+        "location": {
+          "x": 1194,
+          "y": 1234
+        }
+      },
+      {
+        "name": "Note 10",
+        "message": "Yes",
+        "location": {
+          "x": -2210,
+          "y": 120
+        }
+      },
+      {
+        "name": "Note 11",
+        "message": "Lattstt Note",
+        "location": {
+          "x": 1000,
+          "y": 2000
+        }
+      },
+      {
+        "name": "Note 12",
+        "message": "Lat2124124stt Note",
+        "location": {
+          "x": 100,
+          "y": 100
+        }
       }
     ],
     "images": [
