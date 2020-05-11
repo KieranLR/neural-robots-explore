@@ -67,6 +67,9 @@ When you hover over them, they will become visible, and when you click them, it 
 This list is stored in localstorage. 
 Localstorage is a dictionary of key-values stored in your browser. Try not to clear browser history too while working on the project, as it may reset your progress. 
 
+### Playing the Game
+You can move yourself around by dragging. This moves the camera, and you can move it quite fast. Don't get too used to it. I'll be nerfing how fast the camera can move in the future. I might even make you into a character that has to move using the arrow keys or something. 
+
 ## Adding Your Neural Network to the robots. 
 In my next update to the project, I'll be adding a Button that you can click to add your own model to the project. 
 To prevent you having to do this every time you refresh the page, I will be saving the model in localstorage.
